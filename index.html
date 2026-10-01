@@ -1,351 +1,199 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Web Design in 4 minutes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Make a Recipe Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+html{scroll-behavior:smooth;background:#fff}
+body{background:#fff;color:#000;margin:8px}
+pre{font-family:Menlo,Consolas,monospace;font-size:14px;white-space:pre-wrap;overflow-x:auto;background:#f4f4f4;padding:1em;border-left:3px solid #999;color:#333}
+main section{display:none}
+main section.show,#start{display:block}
+.step{font-weight:bold}
+#visited{display:block;margin-top:2em}
 
-    <meta property="og:url" content="https://jgthms.com/web-design-in-4-minutes/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Web Design in 4 minutes">
-    <meta property="og:description" content="Learn the basics of web design in 4 minutes with this interactive tutorial.">
-    <meta property="og:image" content="https://jgthms.com/web-design-in-4-minutes/learn-web-design-in-4-minutes.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+/* Each rule below switches on when the matching step is clicked */
+.step1 body{margin:0 auto;max-width:40em}
+.step2 body{font-family:Georgia,"Times New Roman",serif}
+.step3 body{line-height:1.6;padding:2em 1em 4em}
+.step3 h2{margin-top:1em;padding-top:1em}
+.step4 body{color:#555}
+.step4 h1,.step4 h2,.step4 strong{color:#333}
+.ingredients{margin:1em 0}
+.step5 .ingredients{background:#fdf6e3;border-left:4px solid #e0b252;padding:1em 1em 1em 2.5em}
+.step6 a{color:#d9534f}
+.step6 h2{color:#d9534f;border-bottom:2px solid #f3d3d1;padding-bottom:.3em}
+.step7 header{background:#d9534f;border-radius:12px;text-align:center;padding:2em 1em;margin-bottom:1em}
+.step7 header h1{color:#fff;margin:0;font-weight:400}
+.step7 header p{color:#fff;margin:.5em 0 0}
+.step7 header a{color:#fff}
+</style>
+</head>
+<body>
+<header>
+  <h1>🍰 How to Make a Recipe Website</h1>
+  <p>Click the links as you go &mdash; this page will style itself as you learn.</p>
+</header>
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@jgthms">
-    <meta name="twitter:creator" content="@jgthms">
-    <meta name="twitter:title" content="Web Design in 4 minutes">
-    <meta name="twitter:description" content="Learn the basics of web design in 4 minutes with this interactive tutorial.">
-    <meta name="twitter:image" content="https://jgthms.com/web-design-in-4-minutes/learn-web-design-in-4-minutes.png">
+<main>
+<section id="start">
+  <p>You have recipes you love and want a little website for them. Right now this page is <em>completely unstyled</em> &mdash; it looks like the plain internet of 1995. By the end, it'll look lovely.</p>
+  <p>What is the <a class="step" data-step="0" href="#content">first thing</a> you need?</p>
+</section>
 
-    <link rel="stylesheet" type="text/css" href="index.css">
-  </head>
-  <body>
-    <header id="header">
-      <img id="logo" src="web-design-in-4-minutes.png" alt="Web Design in 4 minutes logo">
-      <h1>Web Design in 4 minutes</h1>
-      <p>
-        <a href="https://jgthms.com" target="_blank">by Jeremy Thomas</a> Stolen by Rosie to teach her mum coding.
-      </p>
-    </header>
+<section id="content">
+  <h2>1. Write your recipe</h2>
+  <p>A website is just a text file. Open Notepad (or TextEdit), type this, and save it as <code>index.html</code>:</p>
+<pre>&lt;h1&gt;Banana Bread&lt;/h1&gt;
+&lt;p&gt;Moist, simple and always disappears fast.&lt;/p&gt;
 
-    <main>
-      <section id="start">
-        <p>Let's say you have a product, a portfolio, or just an idea you want to share with everyone on your <em>own</em> website. Before you publish it on the internet, you want to make it look attractive, professional, or at least <em>decent</em> to look at.</p>
-        <p>What is the <a class="step" data-step="0" href="#content">first thing</a> you need to work on?</p>
-      </section>
+&lt;h2&gt;Ingredients&lt;/h2&gt;
+&lt;ul class="ingredients"&gt;
+  &lt;li&gt;3 ripe bananas&lt;/li&gt;
+  &lt;li&gt;200g sugar&lt;/li&gt;
+  &lt;li&gt;250g flour&lt;/li&gt;
+&lt;/ul&gt;
 
-      <section id="content">
-        <h2>Content</h2>
-        <p>The purpose of <strong>design</strong> is to enhance the presentation of the content it's applied to. It might sound obvious, but content being the <strong>primary</strong> element of a website, it should not be established as an afterthought.</p>
-        <p>Written content, like the paragraph you're currently reading, makes up for more than 90% of the Web. Styling this textual content will go a long way.</p>
-        <p>Let's assume you've already finalised the content you want to publish and just created an empty <code>style.css</code> file, what is the <a class="step" data-step="1" href="#centering">first rule</a> you can write?</p>
-      </section>
+&lt;h2&gt;Method&lt;/h2&gt;
+&lt;p&gt;Mash the bananas, mix everything, bake at 180&deg;C for 50 minutes.&lt;/p&gt;</pre>
+  <p>Double-click the file and it opens in your browser. Looks plain, right? Time to add a second file called <code>style.css</code>. What is the <a class="step" data-step="1" href="#centering">first rule</a> to write?</p>
+</section>
 
-      <section id="centering">
-        <h2>Centering</h2>
-        <p>Long lines of text can be hard to parse, and thus hard to <strong>read</strong>. Setting a limit of characters per line greatly enhances the readability and appeal of a wall of text.</p>
-<pre><span class="selector">body</span> {
-  <span class="attribute">margin</span>: <span class="number">0</span> auto;
-  <span class="attribute">max-width</span>: <span class="number">50</span><span class="unit">em</span>;
+<section id="centering">
+  <h2>2. Centre the text</h2>
+  <p>Lines of text stretching across a huge screen are tiring to read. Keep them in a neat column in the middle:</p>
+<pre>body {
+  margin: 0 auto;
+  max-width: 40em;
 }</pre>
-        <p>After styling the text <em>blocks</em>, what about styling the <a class="step" data-step="2" href="#font-family">text itself</a>?</p>
-      </section>
+  <p>See how this page just shrank into a column? Next, the <a class="step" data-step="2" href="#font">lettering</a>.</p>
+</section>
 
-      <section id="font-family">
-        <h2>Font family</h2>
-        <p>The browser's font defaults to <code>"Times"</code>, which can look unappealing (mostly because it is the "unstyled" font). Switching to a <strong>sans-serif</strong> font like <code>"Helvetica"</code> or <code>"Arial"</code> can vastly improve the look of your page.</p>
-<pre><span class="selector">body</span> {
-  <span class="attribute">font-family</span>: <span class="string">"Helvetica"</span>, <span class="string">"Arial"</span>, sans-serif;
+<section id="font">
+  <h2>3. Pick a font</h2>
+  <p>The default font looks a bit dated. <code>Georgia</code> is a warm, friendly choice for recipes. (<code>Helvetica</code> is a cleaner, modern one.)</p>
+<pre>body {
+  font-family: Georgia, serif;
 }</pre>
-        <p><em>If you want to stick with a serif font, try <code>"Georgia"</code>.</em></p>
-        <p>While this makes the text more <em>appealing</em>, let's also make it <a class="step" data-step="3" href="#spacing">more readable</a>.</p>
-      </section>
+  <p>Now let's give everything some <a class="step" data-step="3" href="#spacing">breathing room</a>.</p>
+</section>
 
-      <section id="spacing">
-        <h2>Spacing</h2>
-        <p>When a page looks "broken" to a user, it's usually a <strong>spacing</strong> issue. Providing space both <em>around</em> and <em>within</em> your content can increase the appeal of your page.</p>
-<pre><span class="selector">body</span> {
-  <span class="attribute">line-height</span>: <span class="number">1.5</span>;
-  <span class="attribute">padding</span>: <span class="number">4</span><span class="unit">em</span> <span class="number">1</span><span class="unit">em</span>;
+<section id="spacing">
+  <h2>4. Add space</h2>
+  <p>If a page looks "squashed" or "broken", it's nearly always missing space. Add space between lines, and around the edges:</p>
+<pre>body {
+  line-height: 1.6;
+  padding: 2em 1em 4em;
 }
 
-<span class="selector">h2</span> {
-  <span class="attribute">margin-top</span>: <span class="number">1</span><span class="unit">em</span>;
-  <span class="attribute">padding-top</span>: <span class="number">1</span><span class="unit">em</span>;
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
 }</pre>
-        <p>While the layout has greatly improved so far, let's apply more <a class="step" data-step="4" href="#color-contrast">subtle changes</a>.</p>
-      </section>
+  <p>Much better. Now some <a class="step" data-step="4" href="#colour">gentle colour</a>.</p>
+</section>
 
-      <section id="color-contrast">
-        <h2>Color &amp; contrast</h2>
-        <p>Black text on a white background can be harsh on the eyes. Opting for a softer shade of black for body text makes the page more <strong>comfortable</strong> to read.</p>
-<pre><span class="selector">body</span> {
-  <span class="attribute">color</span>: <span class="number">#555</span>;
-}</pre>
-        <p>And in order to keep a decent level of <strong>contrast</strong>, let's pick a darker shade for <strong>important</strong> words</p>
-<pre><span class="selector">h1</span>,
-<span class="selector">h2</span>,
-<span class="selector">strong</span> {
-  <span class="attribute">color</span>: <span class="number">#333</span>;
-}</pre>
-        <p>While most of the page has been improved visually, some elements (like the code snippets) still seem <a class="step" data-step="5" href="#balance">out of place</a>.</p>
-      </section>
-
-      <section id="balance">
-        <h2>Balance</h2>
-        <p>It only takes a few additional touches to correct the balance of the page:</p>
-<pre><span class="selector">code</span>,
-<span class="selector">pre</span> {
-  <span class="attribute">background</span>: <span class="number">#eee</span>;
+<section id="colour">
+  <h2>5. Soften the colours</h2>
+  <p>Pure black on white is harsh. Use a soft grey for the text, and a slightly darker grey for headings so they stand out:</p>
+<pre>body {
+  color: #555;
 }
 
-<span class="selector">code</span> {
-  <span class="attribute">padding</span>: <span class="number">2</span>px <span class="number">4</span>px;
-  <span class="attribute">vertical-align</span>: text-bottom;
+h1, h2, strong {
+  color: #333;
+}</pre>
+  <p>Recipes need an obvious ingredients list &mdash; let's make a <a class="step" data-step="5" href="#ingredients">special box</a> for it.</p>
+</section>
+
+<section id="ingredients">
+  <h2>6. Ingredients box</h2>
+  <p>Remember the <code>class="ingredients"</code> we added to the list? Now we can style just that list:</p>
+  <ul class="ingredients">
+    <li>3 ripe bananas</li>
+    <li>200g sugar</li>
+    <li>250g flour</li>
+  </ul>
+<pre>.ingredients {
+  background: #fdf6e3;
+  border-left: 4px solid #e0b252;
+  padding: 1em 1em 1em 2.5em;
+}</pre>
+  <p>Now let's give your site its own <a class="step" data-step="6" href="#accent">signature colour</a>.</p>
+</section>
+
+<section id="accent">
+  <h2>7. Choose your signature colour</h2>
+  <p>Most brands have one colour that ties everything together. Pick one you love (we've gone for a warm tomato red) and use it for links and headings:</p>
+<pre>a {
+  color: #d9534f;
 }
 
-<span class="selector">pre</span> {
-  <span class="attribute">padding</span>: <span class="number">1</span>em;
+h2 {
+  color: #d9534f;
+  border-bottom: 2px solid #f3d3d1;
 }</pre>
-        <p>At this point, you might want to make your page stand out and give it <a class="step" data-step="6" href="#primary-color">identity</a>.</p>
-      </section>
+  <p>Finally, make the top of the page <a class="step" data-step="7" href="#header">stand out</a>.</p>
+</section>
 
-      <section id="primary-color">
-        <h2>Primary color</h2>
-        <p>Most brands have a <strong>primary color</strong> that acts as a visual accent. On a website, this accent can be used to provide emphasis on interactive elements, like <strong>links</strong>.</p>
-<pre><span class="selector">a</span> {
-  <span class="attribute">color</span>: <span class="number">#e81c4f</span>;
-}</pre>
-        <p>But to keep the balance, we will need some <a class="step" data-step="7" href="#secondary-colors">additional colors</a>.</p>
-      </section>
-
-      <section id="secondary-colors">
-        <h2>Secondary colors</h2>
-        <p>The accent color can be complemented with more <em>subtle</em> shades, to be used on borders, backgrounds, or even the body text.</p>
-<pre><span class="selector">body</span> {
-  <span class="attribute">color</span>: <span class="number">#566b78</span>;
+<section id="header">
+  <h2>8. A proper header</h2>
+  <p>Wrap your title in a <code>&lt;header&gt;</code> tag in your HTML, then colour it. <a href="#top">Scroll up to see the change!</a></p>
+<pre>header {
+  background: #d9534f;
+  border-radius: 12px;
+  text-align: center;
+  padding: 2em 1em;
 }
 
-<span class="selector">code</span>,
-<span class="selector">pre</span> {
-  <span class="attribute">background</span>: <span class="number">#f5f7f9</span>;
-  <span class="attribute">border-bottom</span>: <span class="number">1</span><span class="unit">px</span> solid <span class="number">#d8dee9</span>;
-  <span class="attribute">color</span>: <span class="number">#a7adba</span>;
-}
-
-<span class="selector">pre</span> {
-  <span class="attribute">border-left</span>: <span class="number">2</span><span class="unit">px</span> solid <span class="number">#69c</span>;
+header h1 {
+  color: white;
+  font-weight: 400;
 }</pre>
-        <p>Having changed the shades, why not change the <a class="step" data-step="8" href="#custom-font">shapes</a>...</p>
-      </section>
+  <p>Tip: add a mouth-watering photo of your food as a <code>background-image</code> later. There's just <a class="step" data-step="8" href="#publish">one last thing</a>.</p>
+</section>
 
-      <section id="custom-font">
-        <h2>Custom font</h2>
-        <p>Since text is the main content of a webpage, using a <strong>custom font</strong> gives the page even more noticeable identity.</p>
-        <p>While you can embed your own webfont or use an online service like <a href="https://typekit.com" target="_blank">Typekit</a>, let's use <code>"Roboto"</code> from the free <a href="https://fonts.google.com" target="_blank">Google Fonts</a> service:</p>
-<pre><span class="keyword">@import</span> <span class="string">'https://fonts.googleapis.com/css?family=Roboto:300,400,500'</span>;
+<section id="publish">
+  <h2>9. Put it online</h2>
+  <p>Your website is finished! To share it, you need to <strong>publish</strong> it. The easiest free way:</p>
+  <ol>
+    <li>Make sure <code>index.html</code> and <code>style.css</code> are in one folder.</li>
+    <li>Go to <strong>netlify.com/drop</strong>.</li>
+    <li>Drag your folder onto the page.</li>
+    <li>You get a link you can send to the family.</li>
+  </ol>
+  <p>Don't forget to link your CSS by adding this line inside <code>&lt;head&gt;</code> of your HTML:</p>
+<pre>&lt;link rel="stylesheet" href="style.css"&gt;</pre>
+  <p><strong>Well done!</strong> 🎉</p>
+</section>
+</main>
 
-<span class="selector">body</span> {
-  <span class="attribute">font-family</span>: <span class="string">"Roboto"</span>, <span class="string">"Helvetica"</span>, <span class="string">"Arial"</span>, sans-serif;
-}</pre>
-        <p>After enhancing your identity through <em>text</em>, how about adding a <a class="step" data-step="9" href="#images">thousand words</a>...</p>
-      </section>
+<a id="visited" href="#publish">Been here before? Jump to the end.</a>
 
-      <section id="images">
-        <h2>
-          <img src="images.png" alt="Spongebob rainbow meme saying 'Images'">
-        </h2>
-        <p>Graphics and icons can be used either as ornaments to support your content, or actively take part in the message you want to convey.</p>
-        <p>Let's enhance our header with a nice <strong>background image</strong> from <a href="https://unsplash.com/photos/qH36EgNjPJY" target="_blank">Unsplash</a></p>
-<pre><span class="selector">header</span> {
-  <span class="attribute">background-color</span>: <span class="number">#263d36</span>;
-  <span class="attribute">background-image</span>: url(<span class="string">"header.jpg"</span>);
-  <span class="attribute">background-position</span>: center top;
-  <span class="attribute">background-repeat</span>: no-repeat;
-  <span class="attribute">background-size</span>: cover;
-  <span class="attribute">line-height</span>: <span class="number">1.2</span>;
-  <span class="attribute">padding</span>: <span class="number">10</span><span class="unit">vw</span> <span class="number">2</span><span class="unit">em</span>;
-  <span class="attribute">text-align</span>: center;
-}</pre>
-        <p>Let's also add a <strong>logo</strong></p>
-<pre><span class="selector">header img</span> {
-  <span class="attribute">display</span>: inline-block;
-  <span class="attribute">height</span>: <span class="number">120</span><span class="unit">px</span>;
-  <span class="attribute">vertical-align</span>: top;
-  <span class="attribute">width</span>: <span class="number">120</span><span class="unit">px</span>;
-}</pre>
-        <p>Let's take that opportunity to enhance the text styles.</p>
-<pre><span class="selector">header h1</span> {
-  <span class="attribute">color</span>: white;
-  <span class="attribute">font-size</span>: <span class="number">2.5</span><span class="unit">em</span>;
-  <span class="attribute">font-weight</span>: <span class="number">300</span>;
-}
-
-<span class="selector">header a</span> {
-  <span class="attribute">border</span>: <span class="number">1</span><span class="unit">px</span> solid <span class="number">#e81c4f</span>;
-  <span class="attribute">border-radius</span>: <span class="number">290486</span><span class="unit">px</span>;
-  <span class="attribute">color</span>: white;
-  <span class="attribute">font-size</span>: <span class="number">0.6</span><span class="unit">em</span>;
-  <span class="attribute">letter-spacing</span>: <span class="number">0.2</span><span class="unit">em</span>;
-  <span class="attribute">padding</span>: <span class="number">1</span><span class="unit">em</span> <span class="number">2</span><span class="unit">em</span>;
-  <span class="attribute">text-transform</span>: uppercase;
-  <span class="attribute">text-decoration</span>: none;
-  <span class="attribute">transition</span>: none <span class="number">200</span><span class="unit">ms</span> ease-out;
-  <span class="attribute">transition-property</span>: color, background;
-}
-
-<span class="selector">header a:hover</span> {
-  <span class="attribute">background</span>:  <span class="number">#e81c4f</span>;
-  <span class="attribute">color</span>: white;
-}</pre>
-        <p><a href="#header">And voil&agrave;</a>!</p>
-        <p>We've designed a decent page in just a few minutes, following basic principles of web design. There's only <a class="step" data-step="10" href="#share">one last thing</a> left to do...</p>
-      </section>
-
-      <section id="share">
-        <h2>Learn CSS!</h2>
-        <p>
-          I've written a <strong>44-page pdf</strong> that teaches you how to <strong>build your own webpage</strong> from scratch. <span class="emoji">😃</span>
-        </p>
-        <p class="cover">
-          <a class="resource" href="https://jgthms.com/css-in-44-minutes-ebook">
-            <img src="https://jgthms.com/images/empty.png"
-                 srcset="css-in-44-minutes-book-cover.png 1x,
-                         css-in-44-minutes-book-cover@2x.png 2x,
-                         css-in-44-minutes-book-cover@3x.png 3x,
-                         css-in-44-minutes-book-cover@4x.png 4x"
-                         alt="CSS in 44 minutes book cover"
-                         width="252"
-                         height="352">
-          </a>
-        </p>
-        <h2>Share the love!</h2>
-        <nav class="buttons">
-          <a class="button github" href="https://github.com/jgthms/web-design-in-4-minutes" target="_blank">
-            <em>Download on</em> <strong>GitHub</strong>
-          </a>
-          <a
-            class="button facebook"
-            href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjgthms.com%2Fweb-design-in-4-minutes%2F"
-            rel="nofollow"
-            target="_blank"
-            >
-            <em>Share on</em> <strong>Facebook</strong>
-          </a>
-          <a
-            class="button twitter"
-            data-social-network="Twitter"
-            data-social-action="tweet"
-            data-social-target="https://jgthms.com/web-design-in-4-minutes/"
-            href="https://twitter.com/intent/tweet?text=Web%20Design%20in%204%20minutes&url=https%3A%2F%2Fjgthms.com%2Fweb-design-in-4-minutes%2F&via=jgthms"
-            rel="nofollow"
-            target="_blank"
-            >
-            <em>Share on</em> <strong>Twitter</strong>
-          </a>
-        </nav>
-        <h2>Learn how to design with code!</h2>
-        <p>
-          Here are the resources I wrote to help you learn CSS:
-        </p>
-        <nav class="resources">
-          <a class="resource-marksheet resource" href="http://marksheet.io" target="_blank">
-            <figure class="resource-icon">
-              <img src="marksheet.png" alt="Logo of MarkSheet">
-            </figure>
-            <p>
-              <strong class="resource-name">MarkSheet</strong>
-              my <strong>free tutorial</strong> to learn HTML and CSS
-            </p>
-          </a>
-          <a class="resource-bulma resource" href="https://bulma.io" target="_blank">
-            <figure class="resource-icon">
-              <img src="bulma.png" alt="Logo of Bulma">
-            </figure>
-            <p>
-              <strong class="resource-name">Bulma</strong>
-              my <strong>CSS framework</strong> based on Flexbox, so you can get started right away
-            </p>
-          </a>
-          <a class="resource-css-reference resource" href="http://cssreference.io" target="_blank">
-            <figure class="resource-icon">
-              <img src="css-reference.png" alt="Logo of CSS Reference">
-            </figure>
-            <p>
-              <strong class="resource-name">CSS Reference</strong>
-              my <strong>visual guide</strong> to the most popular CSS properties
-            </p>
-          </a>
-        </nav>
-        <p>Thanks for reading!</p>
-      </section>
-
-      <footer>
-        <a class="button" href="https://jgthms.com" target="_blank">Made by <strong>@jgthms</strong></a>
-      </footer>
-    </main>
-
-    <a id="visited" href="#share">Looks like you've already been here. Jump to the end?</a>
-
-<script type="text/javascript">
+<script>
+var html = document.documentElement;
 var steps = document.querySelectorAll('.step');
-var body = document.querySelector('body');
-var html = document.querySelector('html');
 
-for (var i=0; i < steps.length; i++) {
-  var element = steps[i];
-  element.onclick = function(event) {
-    var number = this.dataset.step;
-    var target = this.href;
-    addStep(number, target);
-  }
-};
-
-function removeVisited() {
-  if (document.getElementById('visited')) {
-    body.removeChild(document.getElementById('visited'));
-  }
+function show(id){
+  var el = document.getElementById(id);
+  if (el) el.classList.add('show');
 }
 
-function addStep(number, target) {
-  html.className += ' step' + number;
-
-  removeVisited();
-
-  if (target !== '') {
-    var id = target.split('#')[1];
-    document.getElementById(id).className = 'animate';
-  }
-
-  if (number === '7') {
-    loadGoogleFont();
-  }
+for (var i = 0; i < steps.length; i++) {
+  steps[i].addEventListener('click', function () {
+    html.classList.add('step' + this.dataset.step);
+    show(this.getAttribute('href').slice(1));
+    var v = document.getElementById('visited');
+    if (v) v.remove();
+  });
 }
 
-visited.onclick = function() {
-  loadGoogleFont();
-  for (var i=0; i < 11; i++) {
-    html.className += ' step' + i;
-  }
-  removeVisited();
-}
-
-WebFontConfig = {
-  google: {
-    families: ['Roboto:300,400,500']
-  }
-};
-
-function loadGoogleFont() {
-  (function(d) {
-    var wf = d.createElement('script'), s = d.scripts[0];
-    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
-    s.parentNode.insertBefore(wf, s);
-  })(document);
-}
+document.getElementById('visited').addEventListener('click', function () {
+  for (var i = 0; i <= 8; i++) html.classList.add('step' + i);
+  document.querySelectorAll('main section').forEach(function (s) { s.classList.add('show'); });
+  this.remove();
+});
 </script>
-  </body>
+</body>
 </html>
