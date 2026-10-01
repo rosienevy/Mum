@@ -1,0 +1,329 @@
+Lesson 1 — Building a Recipe Website
+What we're going to build
+
+The end goal is a simple recipe website where you can add your own recipes, photos and information.
+
+We'll build it gradually rather than trying to learn everything at once.
+
+The three building blocks of a website
+
+Most websites use three main technologies:
+
+HTML — the structure and content
+
+HTML tells the browser what is on the page.
+
+For example:
+
+This is a heading
+
+This is a paragraph
+
+This is an image
+
+This is a list
+
+This is a link
+
+Think of HTML as the structure of the website.
+
+CSS — the appearance
+
+CSS tells the browser how things should look.
+
+For example:
+
+What colour something is
+
+What font it uses
+
+How large it is
+
+Where it sits on the page
+
+How much space is around it
+
+Colours, borders and backgrounds
+
+We'll use CSS later to make the recipe website look good.
+
+JavaScript — the behaviour
+
+JavaScript makes a website do things.
+
+For example:
+
+A button that does something when clicked
+
+A menu that opens and closes
+
+Searching or filtering recipes
+
+Interactive features
+
+We won't worry about JavaScript yet.
+
+Where we're starting
+
+We're starting with HTML, because we need to build the structure of the website before we worry about how it looks or behaves.
+
+By the end of this first exercise, we'll have the basic structure of a recipe on a webpage.
+
+Part 1 — The basic HTML document
+
+Start with this:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Mum's Recipes</title>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+There is quite a lot here, so let's break it down.
+
+<!DOCTYPE html>
+
+
+This tells the browser that we're using HTML.
+
+<html>
+
+
+This is the start of the HTML document.
+
+We eventually close it with:
+
+</html>
+
+
+HTML uses opening and closing tags to define different parts of the page.
+
+<head>
+
+
+The head contains information about the webpage.
+
+For now, the important bit is:
+
+<title>Mum's Recipes</title>
+
+
+The title appears in the browser tab.
+
+<body>
+
+
+The body contains the things that we actually see on the webpage.
+
+This is where we're going to put our recipe.
+
+Part 2 — Add the name of the website
+
+Inside <body>, add:
+
+<h1>Mum's Recipes</h1>
+
+
+h1 means heading 1.
+
+It's the main heading on the page.
+
+Try changing the text to whatever you want your recipe website to be called.
+
+For example:
+
+<h1>My Recipe Book</h1>
+
+Now test it
+
+Save the file.
+
+Commit the change to GitHub.
+
+Refresh the website.
+
+You should now see your heading.
+
+This is the basic workflow we'll use throughout the project:
+
+Change → Save → Commit → Refresh → See the change
+
+Part 3 — Add some text
+
+Underneath the heading, add:
+
+<p>
+    Welcome to my collection of recipes.
+</p>
+
+
+p means paragraph.
+
+Change the sentence so that it describes your recipe website.
+
+For example:
+
+<p>
+    A collection of recipes that I make regularly.
+</p>
+
+Part 4 — Add your first recipe
+
+Now we're going to start building the actual recipe.
+
+Add:
+
+<h2>Chocolate Cake</h2>
+
+<p>
+    A simple chocolate cake.
+</p>
+
+
+h2 is a heading underneath the main h1.
+
+You could change this to a recipe you actually want on the website.
+
+Part 5 — Ingredients
+
+Ingredients are a good example of an HTML list.
+
+Add:
+
+<h3>Ingredients</h3>
+
+<ul>
+    <li>200g flour</li>
+    <li>200g sugar</li>
+    <li>200g butter</li>
+    <li>3 eggs</li>
+</ul>
+
+
+There are two new things here.
+
+ul means unordered list.
+
+li means list item.
+
+So:
+
+<ul>
+    <li>Flour</li>
+    <li>Sugar</li>
+    <li>Eggs</li>
+</ul>
+
+
+means:
+
+Make me a bullet-point list containing three items.
+
+Try changing the ingredients to match a recipe you know.
+
+Part 6 — Method
+
+A recipe method is different because the order matters.
+
+For this we can use an ordered list:
+
+<h3>Method</h3>
+
+<ol>
+    <li>Preheat the oven.</li>
+    <li>Mix the ingredients together.</li>
+    <li>Put the mixture into a cake tin.</li>
+    <li>Bake until cooked.</li>
+</ol>
+
+
+ol means ordered list.
+
+The browser automatically numbers the items.
+
+So:
+
+<ol>
+    <li>First step</li>
+    <li>Second step</li>
+    <li>Third step</li>
+</ol>
+
+
+becomes a numbered list.
+
+Your first recipe
+
+Now put everything together.
+
+Your page should have:
+
+A website name
+
+A short introduction
+
+A recipe name
+
+A recipe description
+
+An ingredients list
+
+A method
+
+Use a recipe you actually know rather than copying the example.
+
+Don't worry about making it look good yet.
+
+That's what CSS is for.
+
+Challenge
+
+Before looking at the solution, see if you can add:
+
+Another recipe.
+
+Another paragraph describing it.
+
+The ingredients.
+
+The method.
+
+Then commit your changes and check the website.
+
+The aim isn't to memorise the tags.
+
+The aim is to start recognising the basic pattern:
+
+<h2>Recipe name</h2>
+
+<p>Description</p>
+
+<h3>Ingredients</h3>
+
+<ul>
+    <li>Ingredient</li>
+    <li>Ingredient</li>
+</ul>
+
+<h3>Method</h3>
+
+<ol>
+    <li>Step</li>
+    <li>Step</li>
+</ol>
+
+
+We'll build on this structure in the next lessons.
